@@ -1,5 +1,5 @@
 // ==========================================
-// INFINITY CREATION - INTERACTIVE FEATURES
+// INFINITY CREATIONS - INTERACTIVE FEATURES
 // ==========================================
 
 // Navbar scroll effect
