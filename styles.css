@@ -152,26 +152,45 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    gap: 1rem;
     transition: var(--transition-standard);
 }
 
 .logo-img {
-    height: 35px;
-    width: auto;
-    object-fit: contain;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: var(--transition-standard);
+    border: 2px solid var(--color-white);
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
     transition: var(--transition-standard);
 }
 
 .navbar.scrolled .logo-img {
-    height: 28px;
+    height: 40px;
+    width: 40px;
+}
+
+.navbar.scrolled .logo-text {
+    font-size: 1.2rem;
 }
 
 .logo:hover .logo-img {
     transform: scale(1.05);
+    border-color: var(--color-light-gray);
 }
 
 .footer .logo-img {
-    height: 45px;
+    height: 500px;
+    width: 500px;
     margin-bottom: var(--spacing-sm);
 }
 
@@ -666,7 +685,12 @@ a {
     }
 
     .logo-img {
-        height: 28px;
+        height: 35px;
+        width: 35px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
     }
 
     .section {
