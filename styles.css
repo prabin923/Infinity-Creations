@@ -150,14 +150,29 @@ a {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    background: linear-gradient(135deg, var(--color-white), var(--color-light-gray));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: flex;
+    align-items: center;
+    transition: var(--transition-standard);
+}
+
+.logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition-standard);
+}
+
+.navbar.scrolled .logo-img {
+    height: 28px;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
+}
+
+.footer .logo-img {
+    height: 45px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .nav-menu {
@@ -650,8 +665,8 @@ a {
         gap: var(--spacing-xs);
     }
 
-    .logo {
-        font-size: 1.4rem;
+    .logo-img {
+        height: 28px;
     }
 
     .section {
