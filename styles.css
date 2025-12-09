@@ -588,13 +588,11 @@ a {
     color: var(--color-white);
 }
 
-.contact-social-grid {
+.contact-social-group {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-md);
-    max-width: 240px;
-    margin: var(--spacing-sm) auto 0;
+    margin-top: var(--spacing-sm);
 }
 
 .contact-social-link {
