@@ -588,27 +588,29 @@ a {
     color: var(--color-white);
 }
 
-.contact-social-links {
+.contact-social-row {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     margin-top: var(--spacing-sm);
 }
 
 .contact-social-link {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--color-gray);
     border-radius: 50%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     transition: var(--transition-standard);
+    color: var(--color-light-gray);
 }
 
 .contact-social-link:hover {
     background-color: var(--color-white);
+    color: var(--color-black);
     transform: translateY(-3px) rotate(360deg);
     box-shadow: var(--shadow-md);
     border-color: var(--color-white);
