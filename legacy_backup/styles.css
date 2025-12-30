@@ -232,9 +232,11 @@ a {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-darker-gray) 100%);
+    background: var(--color-black);
+    /* Fallback */
 }
 
+/* Ensure overlay grid stays on top of video but below text */
 .hero::before {
     content: '';
     position: absolute;
@@ -249,7 +251,52 @@ a {
             rgba(255, 255, 255, 0.03) 8px,
             rgba(255, 255, 255, 0.03) 12px);
     pointer-events: none;
-    opacity: 0.5;
+    z-index: 2;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.video-slide.active {
+    opacity: 1;
+}
+
+.video-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay for better text readability */
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(26, 26, 26, 0.6) 100%);
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    max-width: 900px;
+    padding: var(--spacing-md);
+    position: relative;
+    /* Removed background-image from hero, added here or handled by slider */
 }
 
 .hero-content {
