@@ -5,22 +5,22 @@ import { motion } from "framer-motion";
 const slides = [
     {
         type: 'video',
-        src: "https://videos.pexels.com/video-files/3015511/3015511-uhd_2560_1440_24fps.mp4", // Cinematic Camera Lens
+        src: "https://videos.pexels.com/video-files/3015511/3015511-hd_1920_1080_24fps.mp4", // Cinematic Camera Lens (1080p)
         mobileSrc: "https://videos.pexels.com/video-files/6010489/6010489-hd_1080_1920_25fps.mp4" // Vertical Camera/Filmmaking
     },
     {
         type: 'video',
-        src: "https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4",
+        src: "https://videos.pexels.com/video-files/3195394/3195394-hd_1920_1080_25fps.mp4", // 1080p
         mobileSrc: "https://videos.pexels.com/video-files/5532766/5532766-hd_1080_1920_25fps.mp4" // Vertical placeholder
     },
     {
         type: 'video',
-        src: "https://videos.pexels.com/video-files/855564/855564-hd_1920_1080_25fps.mp4",
+        src: "https://videos.pexels.com/video-files/855564/855564-hd_1920_1080_25fps.mp4", // 1080p (Already good)
         mobileSrc: "https://videos.pexels.com/video-files/5532766/5532766-hd_1080_1920_25fps.mp4" // Vertical placeholder
     },
     {
         type: 'video',
-        src: "https://videos.pexels.com/video-files/3209828/3209828-uhd_2560_1440_25fps.mp4",
+        src: "https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4", // 1080p
         mobileSrc: "https://videos.pexels.com/video-files/5532766/5532766-hd_1080_1920_25fps.mp4" // Vertical placeholder
     }
 ];
@@ -43,7 +43,7 @@ const Hero = () => {
                     {slides.map((slide, index) => (
                         <div
                             key={index}
-                            className={`absolute inset - 0 w - full h - full transition - opacity duration - [1500ms] ease -in -out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'} `}
+                            className={`absolute inset-0 w-full h-full transition-opacity duration-[1500ms] ease-in-out ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'} `}
                         >
                             {slide.type === 'youtube' ? (
                                 <>
@@ -77,6 +77,7 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
+                                        preload="auto"
                                         className="hidden md:block w-full h-full object-cover"
                                     >
                                         <source src={slide.src} type="video/mp4" />
@@ -88,6 +89,7 @@ const Hero = () => {
                                         muted
                                         loop
                                         playsInline
+                                        preload="auto"
                                         className="block md:hidden w-full h-full object-cover"
                                     >
                                         <source src={slide.mobileSrc || slide.src} type="video/mp4" />
