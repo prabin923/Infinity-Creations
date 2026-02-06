@@ -60,8 +60,7 @@ const Contact = () => {
                         <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-transparent via-white to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
                         <Phone size={40} className="mx-auto mb-4 text-white group-hover:scale-110 transition-transform" strokeWidth={1.5} />
                         <h3 className="text-xl font-serif font-bold mb-3">Call Us</h3>
-                        <p className="text-light-gray text-sm md:text-base">+977 9876543210</p>
-                        <p className="text-light-gray text-sm md:text-base">+977 9765432109</p>
+                        <p className="text-light-gray text-sm md:text-base">+977 9764818330</p>
                     </motion.div>
 
                     {/* Visit */}
